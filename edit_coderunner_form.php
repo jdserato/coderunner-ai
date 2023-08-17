@@ -1657,7 +1657,7 @@ class qtype_coderunner_edit_form extends question_edit_form {
             //     echo count($question->options->testcases);
             //     echo 'testcases'.$question->options->testcases;
             //     $question->options->testcases[0]->testcode = $this->newline_hack('hiiii');
-            //     $question->options->testcases[1]->testcode = $this->newline_hack('testertester');
+            //     $question->options->testcases[1]->testcode = $this->newline_hack('');
             // }
             // echo("QUESTION before");
             // print_r($this->$question);
@@ -1686,10 +1686,12 @@ class qtype_coderunner_edit_form extends question_edit_form {
             $d = json_decode($complete);
             echo("Give one programming problem involving ".$type);
             echo($d->choices[0]->message->content);
-            $qtext->setValue($d->choices[0]->message->content);
+            $qtext->setValue("worker");
             $form_answer->setValue($d->choices[0]->message->content);
             $form_gextra->setValue($d->choices[0]->message->content);
             $form_question->setValue(array('text' => $d->choices[0]->message->content));
+            print_r($d);
+            // $form_question->setValue(array('text' => $d->choices[0]->message->content));
             // $this->question->questiontext = $d->choices[0]->message->content;
             // $this->question->questiontext['text'] = $d->choices[0]->message->content;
             // $this->question->questiontext = $d->choices[0]->message->content;

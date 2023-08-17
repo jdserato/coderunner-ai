@@ -1643,7 +1643,6 @@ class qtype_coderunner_edit_form extends question_edit_form {
         echo("data of dad");
         // print_r($data);
         echo("SUBMIT VALS of dad");
-        print_r($this->_getElNamesRecursive("questiontext"));
         if (!empty($data->generateAI_button)) {
             // throw new Exception("Generate AI clicked");
             // $data["updatebutton"] = 1;
